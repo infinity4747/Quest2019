@@ -6,7 +6,7 @@ from django.contrib.auth.views import LogoutView
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'),
-    url(r'^login/$', LoginView.as_view(template_name='login.html'), name='login'),
+    url(r'^home/$', TemplateView.as_view(template_name='home.html'), name='home'),
+    url(r'^$', LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$',  LogoutView.as_view(template_name='logged_out.html'), name='logout'),
 ]
